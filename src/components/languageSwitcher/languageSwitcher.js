@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TranslationConsumer } from "../../i18n/translationContext";
 
-export class LanguageSwticher extends Component {
+export class LanguageSwitcher extends Component {
   state = { language: null };
 
   onChangeLanguage = (setLanguage, selectedLanguage) => {

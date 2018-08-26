@@ -1,8 +1,13 @@
 import React from "react";
 import { Countdown } from "./containers/countdown";
-import { FormattedMessage } from "react-intl";
 import styled from "styled-components";
-import { LanguageSwticher } from "./components/languageSwitcher";
+import { LanguageSwitcher } from "./components/languageSwitcher";
+import {
+  dayLabel,
+  hoursLabel,
+  minutesLabel,
+  secondsLabel
+} from "./i18n/formattedMessages/countdown";
 
 const Main = styled.main`
   display: flex;
@@ -17,17 +22,12 @@ const Nav = styled.nav`
   justify-content: center;
 `;
 
-const dayLabel = <FormattedMessage id="days" defaultMessage="Days" />;
-const hoursLabel = <FormattedMessage id="hours" defaultMessage="Hours" />;
-const minutesLabel = <FormattedMessage id="minutes" defaultMessage="Minutes" />;
-const secondsLabel = <FormattedMessage id="seconds" defaultMessage="Seconds" />;
-
 export const App = () => {
   const countdownDate = "2018-09-24T00:00:00";
   return (
     <div>
       <Nav>
-        <LanguageSwticher />
+        <LanguageSwitcher />
       </Nav>
       <Main>
         <h1>Countdown</h1>
