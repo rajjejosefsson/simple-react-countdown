@@ -1,0 +1,24 @@
+{
+  "name": "countdown-final",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "i18next": "11.6.0",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "react-intl": "2.4.0",
+    "react-scripts": "1.1.4",
+    "serve": "^9.6.0",
+    "styled-components": "3.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "now-start": "serve --single ./build",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  }
+}
