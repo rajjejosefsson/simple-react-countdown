@@ -13,7 +13,7 @@ const CountdownContext = React.createContext();
 const Seconds = ({ label = "Seconds" }) => (
   <CountdownContext.Consumer>
     {({ seconds }) => (
-      <CounterBox label={label} value={addLeadingZeros(seconds)} />
+      <CounterBox label={label} time={addLeadingZeros(seconds)} />
     )}
   </CountdownContext.Consumer>
 );
@@ -21,20 +21,20 @@ const Seconds = ({ label = "Seconds" }) => (
 const Minutes = ({ label = "Minutes" }) => (
   <CountdownContext.Consumer>
     {({ minutes }) => (
-      <CounterBox label={label} value={addLeadingZeros(minutes)} />
+      <CounterBox label={label} time={addLeadingZeros(minutes)} />
     )}
   </CountdownContext.Consumer>
 );
 
 const Hours = ({ label = "Hours" }) => (
   <CountdownContext.Consumer>
-    {({ hours }) => <CounterBox label={label} value={addLeadingZeros(hours)} />}
+    {({ hours }) => <CounterBox label={label} time={addLeadingZeros(hours)} />}
   </CountdownContext.Consumer>
 );
 
 const Days = ({ label = "Days" }) => (
   <CountdownContext.Consumer>
-    {({ days }) => <CounterBox label={label} value={addLeadingZeros(days)} />}
+    {({ days }) => <CounterBox label={label} time={addLeadingZeros(days)} />}
   </CountdownContext.Consumer>
 );
 

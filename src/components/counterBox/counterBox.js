@@ -26,9 +26,9 @@ const Box = styled.div`
   height: 100px;
 `;
 
-export const CounterBox = ({ label, value }) => (
+export const CounterBox = ({ label, time }) => (
   <Box>
-    <Time>{value}</Time>
+    <Time>{time}</Time>
     <Label>{label}</Label>
   </Box>
 );
