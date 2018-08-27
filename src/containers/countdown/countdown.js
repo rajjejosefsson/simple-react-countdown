@@ -10,31 +10,35 @@ const CountdownContainer = styled.div`
 
 const CountdownContext = React.createContext();
 
-const Seconds = ({ label = "Seconds" }) => (
+const Seconds = ({ label = "Seconds", ...props }) => (
   <CountdownContext.Consumer>
-    {({ seconds }) => (
-      <CounterBox label={label} time={addLeadingZeros(seconds)} />
+    {({ seconds, ...props }) => (
+      <CounterBox label={label} time={addLeadingZeros(seconds)} {...props} />
     )}
   </CountdownContext.Consumer>
 );
 
-const Minutes = ({ label = "Minutes" }) => (
+const Minutes = ({ label = "Minutes", ...props }) => (
   <CountdownContext.Consumer>
     {({ minutes }) => (
-      <CounterBox label={label} time={addLeadingZeros(minutes)} />
+      <CounterBox label={label} time={addLeadingZeros(minutes)} {...props} />
     )}
   </CountdownContext.Consumer>
 );
 
-const Hours = ({ label = "Hours" }) => (
+const Hours = ({ label = "Hours", ...props }) => (
   <CountdownContext.Consumer>
-    {({ hours }) => <CounterBox label={label} time={addLeadingZeros(hours)} />}
+    {({ hours }) => (
+      <CounterBox label={label} time={addLeadingZeros(hours)} {...props} />
+    )}
   </CountdownContext.Consumer>
 );
 
-const Days = ({ label = "Days" }) => (
+const Days = ({ label = "Days", ...props }) => (
   <CountdownContext.Consumer>
-    {({ days }) => <CounterBox label={label} time={addLeadingZeros(days)} />}
+    {({ days }) => (
+      <CounterBox label={label} time={addLeadingZeros(days)} {...props} />
+    )}
   </CountdownContext.Consumer>
 );
 

@@ -22,6 +22,10 @@ const Nav = styled.nav`
   justify-content: center;
 `;
 
+const Title = styled.h1`
+  align-self: flex-start;
+`;
+
 export const App = () => {
   const countdownDate = "2018-09-24T00:00:00";
   return (
@@ -30,7 +34,7 @@ export const App = () => {
         <LanguageSwitcher />
       </Nav>
       <Main>
-        <h1>Countdown</h1>
+        <Title>Starts In</Title>
         <Countdown date={countdownDate}>
           <Countdown.Days label={dayLabel} />
           <Countdown.Hours label={hoursLabel} />

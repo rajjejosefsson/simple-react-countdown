@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Time = styled.h1`
-   color: #fff;
+  color: #fff;
   font-size: 1.5em;
   text-align: center;
   font-weight: bold;
@@ -26,8 +26,8 @@ const Box = styled.div`
   height: 100px;
 `;
 
-export const CounterBox = ({ label, time }) => (
-  <Box>
+export const CounterBox = ({ label, time, ...props }) => (
+  <Box {...props}>
     <Time>{time}</Time>
     <Label>{label}</Label>
   </Box>
