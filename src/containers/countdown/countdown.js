@@ -81,6 +81,8 @@ export class Countdown extends Component {
     const end = Date.parse(new Date());
     const timeLeft = now - end;
 
+    if (timeLeft <= 0) return false;
+
     const seconds = Math.floor((timeLeft / 1000) % 60);
     const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
     const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
