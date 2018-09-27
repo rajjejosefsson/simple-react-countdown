@@ -1,3 +1,3 @@
-# tour-part-1-countdown
+# Simple React Countdown
 
 ## [Demo](https://codesandbox.io/s/github/rajjejosefsson/tour-countdown) 👈
